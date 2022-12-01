@@ -1,19 +1,27 @@
 package com.marat.tests;
 
+import com.codeborne.selenide.Configuration;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.*;
-import static com.codeborne.selenide.Selenide.*;
-import static com.marat.tests.TestData.firstName;
-import static com.marat.tests.TestData.lastName;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
 
-public class RegistrationFormTests extends TestBase{
+public class RegistrationFormOldTests {
+
+    @BeforeAll
+    static void beforeAll() {
+        Configuration.browserSize = "2560x1440";
+        Configuration.baseUrl = "https://demoqa.com";
+    }
 
     @Test
     void fillFormTest() {
         open("/automation-practice-form");
-        $("#firstName").setValue(firstName);
-        $("#lastName").setValue(lastName);
+        $("#firstName").setValue("Crocodile");
+        $("#lastName").setValue("Dandy");
         $("#userEmail").setValue("Dandy@mail.gru");
         $(byText("Male")).click();
         $("#userNumber").setValue("1234567890");
@@ -34,7 +42,7 @@ public class RegistrationFormTests extends TestBase{
         $("#react-select-4-input").pressEnter();
         $("#submit").pressEnter();
         $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
-        $(byTagName("tbody")).shouldHave(text(firstName + " " + lastName));
+        $(byTagName("tbody")).shouldHave(text("Crocodile Dandy"));
         $(byTagName("tbody")).shouldHave(text("Dandy@mail.gru"));
         $(byTagName("tbody")).shouldHave(text("Male"));
         $(byTagName("tbody")).shouldHave(text("1234567890"));
