@@ -42,16 +42,16 @@ public class RegistrationFormOldTests {
         $("#react-select-4-input").pressEnter();
         $("#submit").pressEnter();
         $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
-        $(byTagName("tbody")).shouldHave(text("Crocodile Dandy"));
-        $(byTagName("tbody")).shouldHave(text("Dandy@mail.gru"));
-        $(byTagName("tbody")).shouldHave(text("Male"));
-        $(byTagName("tbody")).shouldHave(text("1234567890"));
-        $(byTagName("tbody")).shouldHave(text("10 February,1987"));
-        $(byTagName("tbody")).shouldHave(text("Math"));
-        $(byTagName("tbody")).shouldHave(text("Music"));
-        $(byTagName("tbody")).shouldHave(text("photo_2022-11-10_13-45-13.jpg"));
-        $(byTagName("tbody")).shouldHave(text("Pushkin Street 22"));
-        $(byTagName("tbody")).shouldHave(text("Haryana Karnal"));
+        $(byTagName("tbody")).shouldHave(text("Crocodile Dandy"),
+                text("Dandy@mail.gru"),
+                text("Male"),
+                text("1234567890"),
+                text("10 February,1987"),
+                text("Math"),
+                text("Music"),
+                text("photo_2022-11-10_13-45-13.jpg"),
+                text("Pushkin Street 22"),
+                text("Haryana Karnal"));
         $(byText("Close")).pressEnter();
     }
 }
