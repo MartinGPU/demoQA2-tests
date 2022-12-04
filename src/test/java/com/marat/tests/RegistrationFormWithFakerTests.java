@@ -23,7 +23,7 @@ public class RegistrationFormWithFakerTests extends TestBase {
             userAddress = faker.address().fullAddress();
 
     @Test
-    void fillFormTest() {
+    public void fillFormTest() {
         registrationPage.openPage()
                 .typeFirstName(firstName)
                 .typeLastName(lastName)

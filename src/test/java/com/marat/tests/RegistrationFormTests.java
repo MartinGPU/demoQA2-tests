@@ -10,13 +10,13 @@ import static com.codeborne.selenide.Selenide.*;
 public class RegistrationFormTests extends TestBase{
 
     @BeforeAll
-    static void beforeAll() {
+    public static void beforeAll() {
         Configuration.browserSize = "2560x1440";
         Configuration.baseUrl = "https://demoqa.com";
     }
 
     @Test
-    void fillFormTest() {
+    public void fillFormTest() {
         open("/automation-practice-form");
         $("#firstName").setValue("Crocodile");
         $("#lastName").setValue("Dandy");

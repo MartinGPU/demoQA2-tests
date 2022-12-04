@@ -15,7 +15,7 @@ public class RegistrationFormWithPageObjectTests extends TestBase {
     CheckBoxComponent checkBoxComponent = new CheckBoxComponent();
 
     @Test
-    void fillFormTest() {
+    public void fillFormTest() {
         registrationPage.openPage()
                 .typeFirstName(firstName)
                 .typeLastName(lastName)
