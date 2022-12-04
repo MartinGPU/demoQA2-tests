@@ -4,7 +4,6 @@ import com.github.javafaker.Faker;
 import com.marat.pages.RegistrationPage;
 import com.marat.pages.components.*;
 import org.junit.jupiter.api.Test;
-
 import static com.marat.tests.TestData.*;
 
 public class RegistrationFormWithFakerTests extends TestBase {
