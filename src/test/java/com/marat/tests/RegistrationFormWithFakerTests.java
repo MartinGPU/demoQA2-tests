@@ -4,6 +4,7 @@ import com.github.javafaker.Faker;
 import com.marat.pages.RegistrationPage;
 import com.marat.pages.components.*;
 import org.junit.jupiter.api.Test;
+
 import static com.marat.tests.TestData.*;
 
 public class RegistrationFormWithFakerTests extends TestBase {
@@ -15,14 +16,11 @@ public class RegistrationFormWithFakerTests extends TestBase {
     RadioButtonComponent radioButtonComponent = new RadioButtonComponent();
     CheckBoxComponent checkBoxComponent = new CheckBoxComponent();
     Faker faker = new Faker();
-
-    String
-            firstName = faker.name().firstName(),
+    String firstName = faker.name().firstName(),
             lastName = faker.name().lastName(),
             userEmail = faker.internet().emailAddress(),
             userNumber = faker.phoneNumber().subscriberNumber(10),
             userAddress = faker.address().fullAddress();
-
 
     @Test
     void fillFormTest() {
