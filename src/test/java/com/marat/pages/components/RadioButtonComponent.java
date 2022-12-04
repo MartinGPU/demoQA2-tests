@@ -7,6 +7,7 @@ import static com.codeborne.selenide.Selenide.$;
 public class RadioButtonComponent {
 
     private final SelenideElement formRadioButton = $(byText("Male"));
+
     public void selectRadioButton() {
         formRadioButton.click();
     }

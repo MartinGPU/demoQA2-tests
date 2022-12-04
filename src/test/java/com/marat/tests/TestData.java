@@ -2,8 +2,7 @@ package com.marat.tests;
 
 public class TestData {
 
-    public static String
-            firstName = "Crocodile",
+    public static String firstName = "Crocodile",
             lastName = "Dandy",
             userEmail = "Dandy@mail.gru",
             userGender = "Male",

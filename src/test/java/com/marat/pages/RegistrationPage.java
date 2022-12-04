@@ -8,8 +8,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class RegistrationPage {
 
-    private final SelenideElement
-            formTitle = $(".practice-form-wrapper"),
+    private final SelenideElement formTitle = $(".practice-form-wrapper"),
             firstNameInput = $("#firstName"),
             lastNameInput = $("#lastName"),
             emailInput = $("#userEmail"),
