@@ -61,7 +61,6 @@ public class RegistrationPage {
         String FORM_TITLE2 = "Thanks for submitting the form";
         formTitle2.shouldHave(text(FORM_TITLE2));
         return this;
-
     }
 
     public RegistrationPage checkResultsValue(String key, String value) {
